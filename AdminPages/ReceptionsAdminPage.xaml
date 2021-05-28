@@ -1,0 +1,38 @@
+﻿<Page x:Class="SalonApp.AdminPages.ReceptionsAdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Receptions Admin">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="390*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DGReceptionAdmin" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Мастер" Binding="{Binding Master.Name}" Width="250*"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding Client.Name}" Width="250*"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}" Width="65"/>
+                <DataGridTextColumn Header="Время" Binding="{Binding Time}" Width="50"/>
+                <DataGridTextColumn Header="Услуги" Binding="{Binding Service.Name}" Width="150*"/>
+                <DataGridTextColumn Header="Продукты" Binding="{Binding Product.Name}" Width="150*"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Sum}" Width="50"/>
+                <DataGridTemplateColumn Width="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click"/>
+        <Button Content="Удалить" Grid.Row="1" HorizontalAlignment="Right" Name="BtnDelete" Click="BtnDelete_Click"/>
+        <Button Content="В меню" Grid.Row="2" HorizontalAlignment="Right" Name="InMenu" Click="InMenu_Click"/>
+    </Grid>
+</Page>

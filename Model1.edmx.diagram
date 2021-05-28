@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="20b4e8b8f2314c70b67101c8169344a7" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="dbsalonModel.Client" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbsalonModel.Master" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbsalonModel.Product" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbsalonModel.Reception" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbsalonModel.Service" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbsalonModel.Specialization" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbsalonModel.User" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="dbsalonModel.FK_Client_User" ManuallyRouted="false" />
+        <AssociationConnector Association="dbsalonModel.FK_Reception_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="dbsalonModel.FK_Master_Specialization" ManuallyRouted="false" />
+        <AssociationConnector Association="dbsalonModel.FK_Reception_Master" ManuallyRouted="false" />
+        <AssociationConnector Association="dbsalonModel.FK_Reception_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="dbsalonModel.FK_Reception_Service" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

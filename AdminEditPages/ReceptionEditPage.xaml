@@ -1,0 +1,56 @@
+﻿<Page x:Class="SalonApp.AdminEditPages.ReceptionEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d" 
+      d:DesignHeight="270" d:DesignWidth="300"
+      Title="ReceptionEditPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Мастер"/>
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Клиент"/>
+        <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Text="День приема"/>
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Время приема"/>
+        <TextBlock Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Услуги"/>
+        <TextBlock Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Продукт"/>
+        <TextBlock Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Скидка"/>
+        <TextBlock Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Сумма"/>
+
+        <ComboBox Grid.Column="1" Grid.Row="0" x:Name="MasterCB"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <ComboBox x:Name="ClientCB" Width="170" Margin="0"/>
+            <Button x:Name="AddClient" Content="+" Margin="5,0,0,0" Width="25" Height="25" Click="AddClient_Click"/>
+        </StackPanel>
+        <DatePicker Grid.Column="1" Grid.Row="2" x:Name="Date" HorizontalAlignment="Center" SelectedDateFormat="Short" SelectedDateChanged="Date_SelectedDateChanged"/>
+        <ComboBox Grid.Column="1" Grid.Row="3" x:Name="Time"/>
+        <ComboBox Grid.Column="1" Grid.Row="4" x:Name="ServiceCB" SelectionChanged="ServiceCB_SelectionChanged"/>
+        <ComboBox Grid.Column="1" Grid.Row="5" x:Name="ProductCB" SelectionChanged="ProductCB_SelectionChanged"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" x:Name="Discrount" Text="0%" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" x:Name="SumL" Text="0.00 Рублей" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Content="Вернуться" Grid.ColumnSpan="3" Grid.Row="8" Name="InReception" Click="InReception_Click" HorizontalAlignment="Left" Width="100"/>
+        <Button Content="Записать" Grid.ColumnSpan="3" Grid.Row="8" Name="BtnSave" Click="BtnSave_Click" HorizontalAlignment="Right" Width="100"/>
+
+        <TextBlock Grid.Column="3" Grid.Row="0" Text="*" Foreground="Red" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock Grid.Column="3" Grid.Row="1" Text="*" Foreground="Red" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock Grid.Column="3" Grid.Row="2" Text="*" Foreground="Red" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock Grid.Column="3" Grid.Row="3" Text="*" Foreground="Red" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock Grid.Column="3" Grid.Row="4" Text="*" Foreground="Red" VerticalAlignment="Center" FontSize="18" Grid.RowSpan="2" />
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+﻿<Page x:Class="SalonApp.Menu.UserMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d" 
+      d:DesignHeight="150" d:DesignWidth="200"
+      HorizontalAlignment="Center"
+      Title="UserMenu">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Content="Профиль" x:Name="Profile" Click="Profile_Click"/>
+        <Button Grid.Row="1" Content="Мастера" x:Name="Masters" Click="Masters_Click"/>
+        <Button Grid.Row="2" Content="Продукты" x:Name="Products" Click="Products_Click"/>
+        <Button Grid.Row="3" Content="Приемы" x:Name="Receptions" Click="Receptions_Click"/>
+        <Button Grid.Row="4" Content="Услуги" x:Name="Services" Click="Services_Click"/>
+    </Grid>
+</Page>
